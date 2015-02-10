@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 6e003c5e81faa4073811001eec78d3ed
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - xFigure: {fileID: 165722, guid: 8519b1945e818440a8932b8d5f39a1d1, type: 2}
+  - oFigure: {fileID: 139256, guid: 6a568f37b76fe413f802a601e56854ca, type: 2}
+  - WinLine: {fileID: 171170, guid: 43fbc02de8e994bf8a8594d6be5b3641, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
