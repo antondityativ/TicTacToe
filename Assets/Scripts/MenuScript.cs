@@ -8,7 +8,7 @@ public class MenuScript : MonoBehaviour {
 	}
 
 	public void VSComputer(){
-		//TicTacToe.AI ();
+		Application.LoadLevel ("RPSScene");
 	}
 
 	public void QuitButton() {
