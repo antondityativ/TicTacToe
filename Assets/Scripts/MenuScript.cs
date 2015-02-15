@@ -11,7 +11,7 @@ public class MenuScript : MonoBehaviour {
 	}
 
 	public void VSComputer(){
-		//Application.LoadLevel ("gameScene");
+		Application.LoadLevel ("gameScene");
 		PlayerIndex = 2;
 	}
 

@@ -26,7 +26,8 @@ public class TicTacToe : MonoBehaviour {
 			addObj.Touch (); 
 		}
 		else {
-
+			AI Comp = (AI)otherObject.GetComponent(typeof(AI));
+			Comp.ComputerStep ();
 		}
 	}
 
