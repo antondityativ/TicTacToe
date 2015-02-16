@@ -19,30 +19,30 @@ public class TicTacToe : MonoBehaviour {
 	private bool soundOn;
 
 	void Update () {
-		GameObject otherObject = GameObject.Find("otherObject");
-		MenuScript index = (MenuScript)otherObject.GetComponent (typeof(MenuScript));
-		if (index.PlayerIndex == 1) {
-			Touches addObj = (Touches) otherObject.GetComponent(typeof(Touches));
-			addObj.Touch (); 
-		}
-		else {
-			AI Comp = (AI)otherObject.GetComponent(typeof(AI));
-			Comp.ComputerStep ();
-		}
+			GameObject otherObject = GameObject.Find("otherObject");
+			MenuScript index = (MenuScript)otherObject.GetComponent (typeof(MenuScript));
+				if (index.PlayerIndex == 1) {
+						Touches addObj = (Touches) otherObject.GetComponent(typeof(Touches));
+						addObj.Touch (); 
+				}
+				else {
+						AI Comp = (AI)otherObject.GetComponent(typeof(AI));
+						Comp.ComputerStep ();
+				}
 	}
 
 
 	public void SoundOff() {
-		GameObject oFigure = GameObject.Find("O");
-		GameObject xFigure = GameObject.Find("X");
-		GameObject WinLine = GameObject.Find("WinLine");
-		oFigure.audio.Pause ();
-		xFigure.audio.Pause ();
-		WinLine.audio.Pause ();
+			GameObject oFigure = GameObject.Find("O");
+			GameObject xFigure = GameObject.Find("X");
+			GameObject WinLine = GameObject.Find("WinLine");
+			oFigure.audio.Pause ();
+			xFigure.audio.Pause ();
+			WinLine.audio.Pause ();
 	}
 
 	public void BackButton(){
-		Application.LoadLevel("menuScene");
+			Application.LoadLevel("menuScene");
 	}
 
 }
