@@ -17,20 +17,26 @@ public class TicTacToe : MonoBehaviour {
 	private bool gamefinish;
 	private bool gamePause;
 	private bool soundOn;
+	private GameObject otherObject;
+	private MenuScript index;
+	private Touches addObj;
+	private AI Comp;
 
-	void Update () {
-		GameObject otherObject = GameObject.Find("otherObject");
-		MenuScript index = (MenuScript)otherObject.GetComponent (typeof(MenuScript));
-			if (index.PlayerIndex == 1) {
-				Touches addObj = (Touches) otherObject.GetComponent(typeof(Touches));
-				addObj.Touch (); 
-			}
-			else {
-				AI Comp = (AI)otherObject.GetComponent(typeof(AI));
-				Comp.ComputerStep ();
-			}
+	void Awake() {
+		otherObject = GameObject.Find("otherObject");
+		index = (MenuScript)otherObject.GetComponent (typeof(MenuScript));
+		addObj = (Touches) otherObject.GetComponent(typeof(Touches));
+		Comp  = (AI)otherObject.GetComponent(typeof(AI));
 	}
-
+	
+	void Update () { 
+		if (index.PlayerIndex == 1) {
+			addObj.Touch (); 
+		}
+		else {
+			Comp.ComputerStep ();
+		}
+	}
 
 	public void SoundOff() {
 		GameObject oFigure = GameObject.Find("O");
