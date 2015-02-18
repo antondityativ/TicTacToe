@@ -14,19 +14,19 @@ public class TicTacToe : MonoBehaviour {
 	private int xWins;
 	private int oWins;
 	private int draws;
-	private bool gamefinish;
+	private bool gameFinish;
 	private bool gamePause;
 	private bool soundOn;
 	private GameObject otherObject;
 	private MenuScript index;
 	private Touches addObj;
-	private AI Comp;
+	private AI comp;
 
 	void Awake() {
 		otherObject = GameObject.Find("otherObject");
 		index = (MenuScript)otherObject.GetComponent (typeof(MenuScript));
 		addObj = (Touches) otherObject.GetComponent(typeof(Touches));
-		Comp  = (AI)otherObject.GetComponent(typeof(AI));
+		comp  = (AI)otherObject.GetComponent(typeof(AI));
 	}
 	
 	void Update () { 
@@ -34,17 +34,17 @@ public class TicTacToe : MonoBehaviour {
 			addObj.Touch (); 
 		}
 		else {
-			Comp.ComputerStep ();
+			comp.ComputerStep ();
 		}
 	}
 
 	public void SoundOff() {
 		GameObject oFigure = GameObject.Find("O");
 		GameObject xFigure = GameObject.Find("X");
-		GameObject WinLine = GameObject.Find("WinLine");
+		GameObject winLine = GameObject.Find("WinLine");
 		oFigure.audio.Pause ();
 		xFigure.audio.Pause ();
-		WinLine.audio.Pause ();
+		winLine.audio.Pause ();
 	}
 
 	public void BackButton(){

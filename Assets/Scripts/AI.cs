@@ -7,7 +7,7 @@ public class AI : MonoBehaviour {
 
 	public GameObject xFigure;
 	public GameObject oFigure;
-	public GameObject WinLine;
+	public GameObject winLine;
 	private int i;
 	private int [,] matrix = new int[3,3];
 	private string winerName;
@@ -15,7 +15,7 @@ public class AI : MonoBehaviour {
 	private int oWins;
 	private int draws;
 	private bool gamePause;
-	private bool gamefinish;
+	private bool gameFinish;
 	private int step = 0;
 
 

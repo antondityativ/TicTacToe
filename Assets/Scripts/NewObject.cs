@@ -5,7 +5,7 @@ public class NewObject: MonoBehaviour {
 
 	public GameObject xFigure;
 	public GameObject oFigure;
-	public GameObject WinLine;
+	public GameObject winLine;
 	private int i;
 	private int [,] matrix = new int[3,3];
 	private Vector3 p;
@@ -14,7 +14,7 @@ public class NewObject: MonoBehaviour {
 	private int oWins;
 	private int draws;
 	private bool gamePause;
-	private bool gamefinish;
+	private bool gameFinish;
 	private int number = 0;
 
 
@@ -142,35 +142,35 @@ public class NewObject: MonoBehaviour {
 	private void WhoWin() {
 		for (int i=1; i<=2; i++) {
 			if(matrix[0,0]==i && matrix[0,1]==i && matrix[0,2]==i) {
-				Instantiate(WinLine,new Vector3(0.38f, 1.3f, -1f),new Quaternion(0,0,90,90));
+				Instantiate(winLine,new Vector3(0.38f, 1.3f, -1f),new Quaternion(0,0,90,90));
 				EndGame(i);
 			}
 			else if(matrix[0,0]==i && matrix[1,0]==i && matrix[2,0] == i) {
-				Instantiate(WinLine,new Vector3(-1.52f, 0f, -1f),new Quaternion(0,0,0,90));
+				Instantiate(winLine,new Vector3(-1.52f, 0f, -1f),new Quaternion(0,0,0,90));
 				EndGame(i);
 			}
 			else if(matrix[0,0]==i && matrix[1,1]==i && matrix[2,2]==i) {
-				Instantiate(WinLine,new Vector3(0f, 0f, -1f),new Quaternion(0,0,45,90));
+				Instantiate(winLine,new Vector3(0f, 0f, -1f),new Quaternion(0,0,45,90));
 				EndGame(i);
 			}
 			else if(matrix[0,1]==i && matrix[1,1]==i && matrix[2,1]==i) {
-				Instantiate(WinLine,new Vector3(0f, 0f, -1f),new Quaternion(0,0,0,90));
+				Instantiate(winLine,new Vector3(0f, 0f, -1f),new Quaternion(0,0,0,90));
 				EndGame(i);
 			}
 			else if(matrix[0,2]==i && matrix[1,2]==i && matrix[2,2]==i) {
-				Instantiate(WinLine,new Vector3(1.92f, 0f, -1f),new Quaternion(0,0,0,90));
+				Instantiate(winLine,new Vector3(1.92f, 0f, -1f),new Quaternion(0,0,0,90));
 				EndGame(i);
 			}
 			else if(matrix[0,2]==i && matrix[1,1]==i && matrix[2,0]==i) {
-				Instantiate(WinLine,new Vector3(0.1f, -0.13f, -1f),new Quaternion(0,0,-45,90));
+				Instantiate(winLine,new Vector3(0.1f, -0.13f, -1f),new Quaternion(0,0,-45,90));
 				EndGame(i);
 			}
 			else if(matrix[2,0]==i && matrix[2,1]==i && matrix[2,2]==i) {
-				Instantiate(WinLine,new Vector3(0.14f, -1.7f, -1f),new Quaternion(0,0,90,90));
+				Instantiate(winLine,new Vector3(0.14f, -1.7f, -1f),new Quaternion(0,0,90,90));
 				EndGame(i);
 			}
 			else if(matrix[1,0]==i && matrix[1,1]==i && matrix[1,2]==i) {
-				Instantiate(WinLine,new Vector3(0.14f, -0.25f, -1f),new Quaternion(0,0,90,90));
+				Instantiate(winLine,new Vector3(0.14f, -0.25f, -1f),new Quaternion(0,0,90,90));
 				EndGame(i);
 			}
 		    else if(number == 9) {
@@ -192,11 +192,11 @@ public class NewObject: MonoBehaviour {
 			winerName = "It's a draw!";
 			draws++;
 		}
-			gamefinish = true;		
+			gameFinish = true;		
 	}
 
 	private void GuiGroup() {	
-		if (gamefinish) {
+		if (gameFinish) {
 			GUI.Window (0, new Rect (Screen.width / 2f - 100f, Screen.height / 2f - 35f, 200, 70), GameFinishWindow, "Result");
 			if (GUI.Button (new Rect (Screen.width / 2f - 100f, Screen.height / 2f + 50f, 200, 70), "Restart")) {
 				Application.LoadLevel ("gameScene");
