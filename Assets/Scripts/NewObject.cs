@@ -202,8 +202,8 @@ public class NewObject: MonoBehaviour {
 				Application.LoadLevel ("gameScene");
 			}
 		}
-			GUI.Box(new Rect(Screen.width / 2f - 50, Screen.height - 50f, 100, 150), "Score");
-			GUI.Label(new Rect(Screen.width / 2f - 90, Screen.height - 30f, 180, 40), String.Format("{0} {3}; {1} {4}; {2} {5}", "X Wins:", "O Wins", "Draws:", xWins, oWins, draws));
+		GUI.Box(new Rect(Screen.width / 2f - 50, Screen.height - 50f, 100, 150), "Score");
+		GUI.Label(new Rect(Screen.width / 2f - 90, Screen.height - 30f, 180, 40), String.Format("{0} {3}; {1} {4}; {2} {5}", "X Wins:", "O Wins", "Draws:", xWins, oWins, draws));
 	}
 	
 	void GameFinishWindow(int windowId) {
