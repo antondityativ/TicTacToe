@@ -30,11 +30,11 @@ public class TicTacToe : MonoBehaviour {
 	}
 	
 	void Update () { 
-		if (index.PlayerIndex == 1) {
-			addObj.Touch (); 
+		if (index.playerIndex == 1) {
+			addObj.Touch(); 
 		}
 		else {
-			comp.ComputerStep ();
+			comp.ComputerStep();
 		}
 	}
 
@@ -42,9 +42,9 @@ public class TicTacToe : MonoBehaviour {
 		GameObject oFigure = GameObject.Find("O");
 		GameObject xFigure = GameObject.Find("X");
 		GameObject winLine = GameObject.Find("WinLine");
-		oFigure.audio.Pause ();
-		xFigure.audio.Pause ();
-		winLine.audio.Pause ();
+		oFigure.audio.Pause();
+		xFigure.audio.Pause();
+		winLine.audio.Pause();
 	}
 
 	public void BackButton(){

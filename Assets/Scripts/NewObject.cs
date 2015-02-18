@@ -19,123 +19,123 @@ public class NewObject: MonoBehaviour {
 
 
 	public void AddObject() {
-		p = Camera.main.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 10f));
+		p = Camera.main.ScreenToWorldPoint(new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 10f));
 		if (p.x <= -1.06f && p.x >= -2.25f && p.y >= 0.67f && p.y <= 1.98f && matrix [0, 0] == 0) {
 			if (i % 2 == 1) {
-				Instantiate (oFigure, p, Quaternion.identity);
+				Instantiate(oFigure, p, Quaternion.identity);
 				matrix [0, 0] = 2;
 			}
 			else {
-				Instantiate (xFigure, p, Quaternion.identity);
+				Instantiate(xFigure, p, Quaternion.identity);
 				matrix [0, 0] = 1;
 			}
 				i += 1;
 				number ++;
-				WhoWin ();
+				WhoWin();
 		}
 		if (p.x <= 0.88f && p.x >= -0.67f && p.y >= 0.67f && p.y <= 1.98f && matrix [0, 1] == 0) {
 			if (i % 2 == 1) {
-				Instantiate (oFigure, p, Quaternion.identity);
+				Instantiate(oFigure, p, Quaternion.identity);
 				matrix [0, 1] = 2;
 			} 
 			else {
-				Instantiate (xFigure, p, Quaternion.identity);
+				Instantiate(xFigure, p, Quaternion.identity);
 				matrix [0, 1] = 1;
 			}
 				i += 1;
 				number ++;
-				WhoWin ();
+				WhoWin();
 		}
 		if (p.x <= 2.37f && p.x >= 1.27f && p.y >= 0.67f && p.y <= 1.98f && matrix [0, 2] == 0) {	
 			if (i % 2 == 1) {
-				Instantiate (oFigure, p, Quaternion.identity);
+				Instantiate(oFigure, p, Quaternion.identity);
 				matrix [0, 2] = 2;			
 			} 
 			else {
-				Instantiate (xFigure, p, Quaternion.identity);
+				Instantiate(xFigure, p, Quaternion.identity);
 				matrix [0, 2] = 1;			
 			}
 				i += 1;
 				number ++;
-				WhoWin ();
+				WhoWin();
 		}
 		if (p.x <= -1.06f && p.x >= -2.25f && p.y >= -0.74f && p.y <= 0.3f && matrix [1, 0] == 0) {
 			if (i % 2 == 1) {
-				Instantiate (oFigure, p, Quaternion.identity);
+				Instantiate(oFigure, p, Quaternion.identity);
 				matrix [1, 0] = 2;			
 			}
 			else {
-				Instantiate (xFigure, p, Quaternion.identity);
+				Instantiate(xFigure, p, Quaternion.identity);
 				matrix [1, 0] = 1;			
 			}
 				i += 1;
 				number ++;
-				WhoWin ();
+				WhoWin();
 		}
 		if (p.x <= 0.82f && p.x >= -0.58f && p.y >= -0.74f && p.y <= 0.3f && matrix [1, 1] == 0) {
 			if (i % 2 == 1) {
-				Instantiate (oFigure, p, Quaternion.identity);
+				Instantiate(oFigure, p, Quaternion.identity);
 				matrix [1, 1] = 2;			
 			}
 			else {
-				Instantiate (xFigure, p, Quaternion.identity);
+				Instantiate(xFigure, p, Quaternion.identity);
 				matrix [1, 1] = 1;
 			}
 				i += 1;
 				number ++;
-				WhoWin ();
+				WhoWin();
 		}
 		if (p.x <= 2.36f && p.x >= 1.28f && p.y >= -0.74f && p.y <= 0.3f && matrix [1, 2] == 0) {
 			if (i % 2 == 1) {
-				Instantiate (oFigure, p, Quaternion.identity);
+				Instantiate(oFigure, p, Quaternion.identity);
 				matrix [1, 2] = 2;			
 			}
 			else {
-				Instantiate (xFigure, p, Quaternion.identity);
+				Instantiate(xFigure, p, Quaternion.identity);
 				matrix [1, 2] = 1;
 			}
 				i += 1;
 				number ++;
-				WhoWin ();
+				WhoWin();
 		}
 		if (p.x <= -1.2f && p.x >= -2.47f && p.y >= -2.01f && p.y <= -1.06f && matrix [2, 0] == 0) {
 			if (i % 2 == 1) {
-				Instantiate (oFigure, p, Quaternion.identity);
+				Instantiate(oFigure, p, Quaternion.identity);
 				matrix [2, 0] = 2;
 			}
 			else {
-				Instantiate (xFigure, p, Quaternion.identity);
+				Instantiate(xFigure, p, Quaternion.identity);
 				matrix [2, 0] = 1;			
 			}
 				i += 1;	
 				number ++;
-				WhoWin ();
+				WhoWin();
 		}
 		if (p.x <= 0.5f && p.x >= -0.5f && p.y >= -2.01f && p.y <= -1.06f && matrix [2, 1] == 0) {
 			if (i % 2 == 1) {		
-				Instantiate (oFigure, p, Quaternion.identity);
+				Instantiate(oFigure, p, Quaternion.identity);
 				matrix [2, 1] = 2;										
 			}
 			else {
-				Instantiate (xFigure, p, Quaternion.identity);
+				Instantiate(xFigure, p, Quaternion.identity);
 				matrix [2, 1] = 1;			
 			}
 				i += 1;
 				number ++;
-				WhoWin ();
+				WhoWin();
 		}
 		if (p.x <= 2.2f && p.x >= 1.2f && p.y >= -2.01f && p.y <= -1.06f && matrix [2, 2] == 0) {
 			if (i % 2 == 1) {		
-				Instantiate (oFigure, p, Quaternion.identity);
+				Instantiate(oFigure, p, Quaternion.identity);
 				matrix [2, 2] = 2;			
 			}
 			else {
-				Instantiate (xFigure, p, Quaternion.identity);
+				Instantiate(xFigure, p, Quaternion.identity);
 				matrix [2, 2] = 1;			
 			}
 				i += 1;
 				number ++;
-				WhoWin ();
+				WhoWin();
 		}
 	}
 
