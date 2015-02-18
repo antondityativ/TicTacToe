@@ -195,12 +195,11 @@ public class NewObject: MonoBehaviour {
 
 	private void GuiGroup() {	
 		if (gamefinish) {
-			GUI.Window(0, new Rect(Screen.width / 2f - 100f, Screen.height / 2f - 35f, 200, 70), GameFinishWindow, "Result");
+			GUI.Window (0, new Rect (Screen.width / 2f - 100f, Screen.height / 2f - 35f, 200, 70), GameFinishWindow, "Result");
 				if (GUI.Button (new Rect (Screen.width / 2f - 100f, Screen.height / 2f + 50f, 200, 70), "Restart")) {
 					Application.LoadLevel ("gameScene");
-			}
+				}
 		}
-		
 			GUI.Box(new Rect(Screen.width / 2f - 50, Screen.height - 50f, 100, 150), "Score");
 			GUI.Label(new Rect(Screen.width / 2f - 90, Screen.height - 30f, 180, 40), String.Format("{0} {3}; {1} {4}; {2} {5}", "X Wins:", "O Wins", "Draws:", xWins, oWins, draws));
 	}
