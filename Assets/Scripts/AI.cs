@@ -1,5 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
+using Random = UnityEngine.Random;
+using System.Collections.Generic;
 
 public class AI : MonoBehaviour {
 
@@ -17,8 +20,8 @@ public class AI : MonoBehaviour {
 	private bool gamePause;
 	private bool gameFinish;
 	private int step = 0;
-
-
+	public GameObject[] arrayGameObject = new GameObject[9];
+	
 	public void ComputerStep() {
 		p = Camera.main.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 10f));
 		if (step == 0) {			
@@ -48,9 +51,10 @@ public class AI : MonoBehaviour {
 			}
 			if (matrix [1, 1] == 1 || matrix [1, 1] == 2) {
 				if (i % 2 == 1) {
-					Instantiate(oFigure, new Vector3 (2.0f, 1.45f, 0), Quaternion.identity);
-				} else {
-					Instantiate(xFigure, new Vector3 (2.0f, 1.45f, 0), Quaternion.identity);
+					Instantiate(arrayGameObject [Random.Range(0,8)],arrayGameObject[Random.Range(0,8)].transform.position, Quaternion.identity);
+				} 
+				else {
+					Instantiate(xFigure, arrayGameObject[0].transform.position, Quaternion.identity);
 				}
 			}
 			i += 1;
