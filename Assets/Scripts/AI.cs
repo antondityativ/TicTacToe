@@ -45,13 +45,13 @@ public class AI : MonoBehaviour {
 					Instantiate(oFigure, new Vector3 (0.11f, -0.147f, 0), Quaternion.identity);
 					matrix[1,1] = 2;
 				} else {
-					Instantiate (xFigure, new Vector3 (0.11f, -0.147f, 0), Quaternion.identity);
+					Instantiate(xFigure, new Vector3 (0.11f, -0.147f, 0), Quaternion.identity);
 					matrix[1,1] = 2;
 				}
 			}
 			if (matrix [1, 1] == 1 || matrix [1, 1] == 2) {
 				if (i % 2 == 1) {
-					Instantiate(arrayGameObject [Random.Range(0,8)],arrayGameObject[Random.Range(0,8)].transform.position, Quaternion.identity);
+					Instantiate(arrayGameObject[Random.Range(0,8)], arrayGameObject[Random.Range(0,8)].transform.position, Quaternion.identity);
 				} 
 				else {
 					Instantiate(xFigure, arrayGameObject[0].transform.position, Quaternion.identity);
